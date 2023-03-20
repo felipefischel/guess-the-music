@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Music</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="shortcut icon" type="image/x-icon" href="icons/GTM.svg">
+
+
+  <!-- Social Sharing Meta Tags -->
+  <meta property="og:title" content="Guess The Music - Test Your Knowledge with Today's Hottest Hits from Spotify's Top 50 Playlists">
+  <meta property="og:description" content="Guess The Music is a thrilling music quiz app that challenges your knowledge of the most popular songs right now using Spotify's Top 50 playlists.">
+  <meta property="og:image" content="guessthemusic-homepage.png">
+  <meta property="og:url" content="https://guessthemusic.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Guess The Music">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Guess The Music - Test Your Knowledge with Today's Hottest Hits from Spotify's Top 50 Playlists">
+  <meta name="twitter:description" content="Guess The Music is a thrilling music quiz app that challenges your knowledge of the most popular songs right now using Spotify's Top 50 playlists.">
+  <meta name="twitter:image" content="guessthemusic-homepage.png">
+
+  <!-- SEO Tags -->
+  <meta name="description" content="Guess The Music is a thrilling music quiz app that challenges your knowledge of the most popular songs right now using Spotify's Top 50 playlists.">
+  <meta name="keywords" content="music quiz, Spotify Top 50, popular songs, music trivia, guess the song, song challenge, music charts, music game, hit songs, music knowledge, music test, artist trivia, song recognition, music app, music competition, music playlist, top hits, trending music, music quiz app, music discovery">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C7EEZK6E9Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C7EEZK6E9Q');
+  </script>
+
+</head>
+<body>
+  </div>
+  <div class="main-container">
+    <div class="row no-gutters top-row">
+      <div class="col-6 d-flex justify-content-start">
+        <img src="icons/GTM.svg" alt="Logo" class="logo">
+      </div>
+      <div class="col-6 d-flex justify-content-end">
+        <button id="mute-unmute-button" class="mute-unmute"></button>
+      </div>
+    </div>
+    <div class="inner-wrapper">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center top-50">Top 50</h1>
+          <hr style="border-top: 1px solid black; width: 85%;">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="select-wrapper">
+            <select id="playlist-select"></select>
+          </div>
+          <div class="select-wrapper">
+            <select id="guess-type">
+              <option value="song">Guess the Song</option>
+              <option value="artist">Guess the Artist</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-8 d-flex flex-column">
+          <audio id="audio-player"></audio>
+          <button id="play-button">Play Audio</button>
+        </div>
+      </div>
+    </div>
+    <div class="song-options-wrapper">
+      <div class="row">
+        <div class="col-12">
+          <div id="options-container">
+            <button class="option btn btn-light"></button>
+            <button class="option btn btn-light"></button>
+            <button class="option btn btn-light"></button>
+            <button class="option btn btn-light"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <p id="current-streak">🔥 Current streak: 0</p>
+    </div>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 100%;" id="progress-bar"></div>
+    </div>
+  </div>
+  <footer>
+    <div>Created with ❤️ by <a href="https://www.linkedin.com/in/felipe-fischel" target="_blank" rel="noopener noreferrer">Felipe</a></div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
